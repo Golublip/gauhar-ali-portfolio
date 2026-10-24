@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --text-primary: #0d1620;
+    --text-muted: #526071;
+    --card-bg: #ffffff;
+    --card-border: rgba(91, 127, 166, 0.22);
+    --telemetry-grid: rgba(91, 127, 166, 0.05);
+  }
+
+  .dark {
+    --bg-primary: #0d1620;
+    --text-primary: #f7f8f9;
+    --text-muted: #8e9eaf;
+    --card-bg: #111d2b;
+    --card-border: rgba(91, 127, 166, 0.18);
+    --telemetry-grid: rgba(91, 127, 166, 0.04);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle Perfusion Telemetry Grid Background */
+.perfusion-telemetry-bg {
+  background-image: 
+    linear-gradient(to right, var(--telemetry-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--telemetry-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(13, 22, 32, 0.05);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0d1620;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5b7fa6;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e03a3e;
+}
+
+/* Horizontal scroll styling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Focus visible styling */
+:focus-visible {
+  outline: 2px solid #e03a3e !important;
+  outline-offset: 2px !important;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gauhar Ali — Cardiac Perfusion Technology & Clinical AI</title>
+    <meta name="description" content="Portfolio of Gauhar Ali, first-year B.Sc. (Hons) Cardiac Perfusion Technology undergraduate at MNR University, Hyderabad. Clinical research, extracorporeal technology, and biomedical AI." />
+    <meta name="author" content="Gauhar Ali" />
+    <meta name="keywords" content="Gauhar Ali, Cardiac Perfusion Technology, Perfusionist, MNR University, Extracorporeal Circulation, Cardiopulmonary Bypass, ECMO, Clinical AI, Hyderabad, YuvaIntern" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gauhar Ali — Cardiac Perfusion Technology & Clinical AI" />
+    <meta property="og:description" content="Cardiovascular healthcare, clinical research, extracorporeal circulation, and emerging healthcare AI portfolio." />
+    <meta property="og:image" content="/photo.jpg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gauhar Ali — Cardiac Perfusion Technology & Clinical AI" />
+    <meta name="twitter:description" content="Cardiovascular healthcare, clinical research, extracorporeal circulation, and emerging healthcare AI portfolio." />
+    <meta name="twitter:image" content="/photo.jpg" />
+
+    <!-- Favicon: Cardiac Perfusion Arterial Pulse Waveform -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1620'/><path d='M4 17h6l2.5-6 4 14 3.5-10 2.5 4h5.5' fill='none' stroke='%23e03a3e' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/><circle cx='16.5' cy='25' r='1.5' fill='%235b7fa6'/></svg>" />
+
+    <!-- Google Fonts: Bricolage Grotesque (headings) & Instrument Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- System preference detection with smooth fallback -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('gauhar-portfolio-theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-warm-50 text-navy-900 dark:bg-navy-900 dark:text-warm-100 font-body antialiased selection:bg-arterial selection:text-white transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
