@@ -138,8 +138,8 @@ export const portfolioData: PortfolioData = {
     linkedinUrl: "https://linkedin.com/in/gauharali5550",
     githubDisplay: "github.com/Golublip",
     githubUrl: "https://github.com/Golublip",
-    cvUrl: "/cv.pdf",
-    photoUrl: "/photo.jpg",
+    cvUrl: `${import.meta.env.BASE_URL}cv.pdf`,
+    photoUrl: `${import.meta.env.BASE_URL}photo.jpg`,
     curriculumSummary: "Cardiopulmonary bypass circuits, hemodynamics, extracorporeal membrane oxygenation (ECMO), patient safety, and clinical data systems."
   },
 
